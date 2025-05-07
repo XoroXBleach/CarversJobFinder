@@ -1,9 +1,59 @@
-<!-- 
-  Project: Carver's Job Finder
-  Author: J. Carver
-  Date: 5/6/2025
-  Description: HTML for website dedicated to helping Cyber@UC students determine what jobs they might pursue
-  Version: 1.0
--->
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Optional built-in fallback styles if style.css isn't available */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #000000;
+    }
+    .quiz-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #181818;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .btn-container {
+      margin-top: 1rem;
+    }
+    .btn-container button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #next-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .selected {
+      background-color: #007bff;
+      color: black;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <div id="question-container">
+      <h2 id="question">Loading question...</h2>
+      <div id="answer-buttons" class="btn-container"></div>
+    </div>
+    <button id="next-btn" disabled>Next</button>
+    <div id="result" class="hidden"></div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
